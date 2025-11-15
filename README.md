@@ -107,13 +107,13 @@ CSV aggregates all experiments in a single table.
 
 ---
 
-## Example Results
 ### Summary Table (metrics.csv)
 ```
-dataset textLength patternLength matches execution_ns
-small 1000 4 3 125000
-medium 10000 4 12 890000
-large 100000 4 40 7120000
+size,pattern,matches,execution_ns
+small,ababd,1,795800
+medium,abcabc,18,30200
+large,aaaaaaab,1,43200
+
 ```
 
 ---
