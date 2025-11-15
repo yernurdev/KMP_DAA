@@ -19,7 +19,7 @@ public class KMPMatcher {
 
         while (i < n) {
             if (text.charAt(i) == pattern.charAt(j)) {
-
+                i++;
                 j++;
                 if (j == m) {
                     result.add(i - j);
@@ -40,6 +40,7 @@ public class KMPMatcher {
 
         while (i < m) {
             if (p.charAt(i) == p.charAt(len)) {
+                len++;
                 lps[i] = len;
                 i++;
             } else {
