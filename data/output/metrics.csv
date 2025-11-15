@@ -1,0 +1,4 @@
+size,pattern,matches,execution_ns
+small,ababd,1,795800
+medium,abcabc,18,30200
+large,aaaaaaab,1,43200

@@ -43,6 +43,22 @@ public class Main {
         fw.write(new Gson().toJson(result));
         fw.close();
 
+        writeCsvRow(size, pattern, positions.size(), end - start);
+
         System.out.println("Finished: " + size + " | matches=" + positions.size() + " | time=" + (end - start));
+    }
+
+    private static void writeCsvRow(String size, String pattern, int matches, long timeNs) throws Exception {
+        String csvPath = "data/output/metrics.csv";
+        boolean exists = Files.exists(Paths.get(csvPath));
+
+        FileWriter fw = new FileWriter(csvPath, true);
+
+        if (!exists) {
+            fw.write("size,pattern,matches,execution_ns\n");
+        }
+
+        fw.write(size + "," + pattern + "," + matches + "," + timeNs + "\n");
+        fw.close();
     }
 }
