@@ -21,6 +21,7 @@ public class KMPMatcherTest {
     @Test
     public void testOverlap() {
         KMPMatcher kmp = new KMPMatcher("aaa");
-        assertEquals(3, kmp.search("aaaaaa").size());
+        assertEquals(4, kmp.search("aaaaaa").size());
     }
+
 }
